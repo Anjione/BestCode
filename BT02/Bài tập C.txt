@@ -1,0 +1,126 @@
+1.
+#include<iostream>
+using namespace std;
+
+bool KiemTraSoNguyenTo(int n)
+{
+    if(n < 2)
+    {
+        return false;
+    }
+    else
+    {
+        for(int i=2; i<n; i++)
+        {
+            if(n % i == 0)
+            {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    if(KiemTraSoNguyenTo(n) == true)
+    {
+        cout << "yes";
+    }
+    else
+    {
+        cout << "no";
+    }
+    return 0;
+}
+2.
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    cin >> N;
+    for (int i = 0; i < N; i++)
+    {
+        string space(i,  ' ');
+        string draw(N - i, '*');
+        cout << space << draw << endl;
+    }
+
+    return 0;
+}
+3.    
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    cin >> N;
+    for (int i = 1; i <= N; i++)
+    {
+        string space(N-i,  ' ');
+        string draw(i, '*');
+        string draw2(i-1,'*');
+        cout << space << draw << draw2 << endl;
+    }
+
+    return 0;
+}
+4.
+    
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    cin >> N;
+    for (int i = N; i >= 1; i++)
+    {
+        string space(N-i,  ' ');
+        string draw(i, '*');
+        string draw2(i-1,'*');
+        cout << space << draw << draw2 << endl;
+    }
+
+    return 0;
+}
+6.
+#include<iostream>
+
+using namespace std;
+int main()
+{
+    int N;
+    cin>>N;
+    int a[N][N];
+    for (int i = 0; i < N; i++)
+    {
+        int data = i+1;
+        for (int j = 0; j< N; j++)
+        {
+            a[j][i] = data;
+            data+=1;
+            if (data > N) data = 1;
+        }
+    }
+
+     for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j< N; j++)
+        {
+            cout << a[j][i] << "  ";
+        }
+        cout << endl;
+    }
+    return 0;
+}

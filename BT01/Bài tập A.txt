@@ -1,0 +1,114 @@
+1.Lenh sau ðây làm gi khi grade là mot bien kieu int. Neu có loi cú pháp, hay sua loi.
+		bool isA = (90 <= grade <= 100);
+Tra loi:
+Khi grade là mot bien kieu int, tra ve true khi grade có giá tri nam trong khoang tu 90 ðen 100.
+Tra ve false neu không phai.
+Sua loi cú pháp 
+bool isA = ((90 >= grade) && (grade <=100))
+
+2.Ðoan chýõng trinh sau ðây in ra ket qua gi?
+	double x = (double) (3/5);
+	cout << x;
+Tra loi:
+Ðoan chýõng trinh in ra 0.6
+
+3.Tai sao ðoan code dýoi ðây không in ra 4294967296 = 2^32?
+	int x = 65536;
+	long y = x * x;
+	cout << y;
+Tra loi:
+Va ket qua 4294967296 výot quá giá tri cua kieu long (4294967296 - 1)
+
+4.Bieu thuc sau có giá tri gi?
+	(Math.sqrt(2) * Math.sqrt(2) == 2)
+Tra loi:
+Chýa xác ðanh ðýoc giá tri cua bieu thuc va con phu thuoc vào bien Math
+
+5.Viet mot chuong trinh divideByZero de xem chuyen gi xay ra khi ban dem chia mot gia tri kieu 
+int hoac double cho 0 hoac lay dong du cho 0
+Tra loi:
+Chýõng trinh se không ra ket qua
+
+6.Thu xem trinh biên dich nói gi voi mot chýõng trinh có hàm main chua ðoan code sau
+	int a = 27 * "three";
+hoac
+	double x;
+	cout << x;
+Neu chuyen dong khai báo x ra ngoài hàm main thi chuyen gi xay ra?
+Tra loi:
+- Voi int a = 27 * "three";
+ Trinh biên dich se thông báo không có phép tính nào thuc hien giua mot bien kieu int và mot bien kieu const char
+- Voi double x; 
+      cout << x;
+   X se ðýoc gán bang mot giá tri bat ki 
+   Neu chuyen x ra ngoài main thi x se tu ðýoc gán bang 0
+
+7.Ðoan code sau cho output g??
+int threeInt = 3;
+	int fourInt  = 4;
+	double threeDouble = 3.0;
+	double fourDouble  = 4.0;
+	cout << threeInt / fourInt << endl;
+	cout << threeInt / fourDouble << endl;
+	cout << threeDouble / fourInt << endl;
+	cout << threeDouble / fourDouble << endl;
+Ðoan code sau cho output là:
+0
+0
+0.75
+0.75
+
+8.Chuyen gi xay ra neu ta khai báo hai bien trùng tên trong cùng mot khoi lenh (block)? Lay ví du là chýõng trinh có hàm main() voi noi dung sau:
+	int  arg1;
+	arg1 = -1;
+	int x, y, z;
+	char myDouble = ’5 ’;
+	char arg1 = ’A ’;
+	cout << arg1 << "\n";
+	return 0;
+Tra loi:
+Trinh biên dich se báo loi ðe ðýoc khai báo trýoc ðó và cho ra bien ðe ðýoc khai 
+báo tu trýoc 
+
+9.Cung cau hoi tren voi doan code sau:
+	int arg1;
+	arg1 = -1;
+	{
+	  char arg1 = ’A’; 
+	  cout << arg1 << "\n"; 
+	} 
+	return 0;
+
+Khi o ben trong khoi lenh con, dinh danh arg1 chi toi bien arg1 nao?
+Tra loi:
+Khi o ben trong khoi lenh con, dinh dang arg1 chi toi bien arg1 kieu char
+
+10.Cung cau hoi tren voi doan code sau:
+	int arg1;
+	arg1 = -1;
+	{
+	  char arg1 = ’A’; 
+	} 
+	cout << arg1 << "\n"; 
+	return 0; 
+
+Khi ra khoi khoi lenh con, dinh dang arg1 chi toi bien arg1 nao?
+Tra loi:
+Khi o ben trong khoi lenh con, dinh dang arg1 chi toi bien arg1 kieu int
+
+11. Chuyen doi nhiet do. Dong lenh sau co nhiem vu doi tu do F(Fahrenheit) sang 
+do C(Celsius). Lenh do co gi sai?
+	double C = (F - 32) * (5 / 9);
+Tra loi:
+Chua khai bao F.
+Trong truong hop da khai bao F va F mang kieu int thi de nhan duoc gia tri C mang
+kieu double can phai ghi nhu sau:
+	double C = (double) (F - 32) * (5 / 9);
+
+12. Doan code sau in ra ket qua gi?
+	if(10 > 5);
+	else; {
+	    cout << "Here";
+	};
+Tra loi:
+Code tren in ra Here	

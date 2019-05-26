@@ -1,0 +1,86 @@
+13. Distance.cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int x, y;
+    cin >> x >> y;
+    double distance = sqrt(x*x + y*y);
+    cout << distance;
+}
+16. Ba so bang nhau
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    if( a==b && b==c)
+    {
+	cout << "true";
+    }
+    else
+    {
+	cout << "false";
+    }
+}
+18.
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+
+  int x1, y1,x2, y2;
+  float result;
+  cin >> x1 >> y1 >> x2 >> y2;
+  result = sqrt( (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+  cout << result << endl;
+  return 0;
+}
+19.
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int x, y, z;
+    cin >> x >> y >> z;
+    bool b = false;
+    if(x < y && y < z || x > y && y > z)
+    {
+        b = true;
+    }
+    else
+    {
+        cout << b;
+    }
+    return 0;
+}
+
+20.
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+
+  int x, y;
+  bool b = false;
+  cin >> x >> y ;
+  if ( (x%7 == 0) && (y%7 == 0) )
+  {
+      cout << "true" << endl;
+  }
+  else
+  {
+      cout << "false" << endl;
+  }
+  return 0;
+}
